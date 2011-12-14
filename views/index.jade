@@ -1,0 +1,34 @@
+!!! 5
+html(lang='pt-br')
+  head
+    title= title
+    link(rel='stylesheet', href='/bootstrap/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='javascripts/jquery-1.6.2.js')
+    script(src='bootstrap/js/bootstrap-modal.js')
+    script(src='/socket.io/socket.io.js')
+    script(src='javascripts/all.js')
+  body
+    header
+      h1#logo Node.js Chat
+    .modal.hide.fade#nick-modal
+      .modal-header
+        h3 Choose a nickname
+      .modal-body
+        form.form-stacked#nick-form
+          fieldset
+            label Nickname:
+            input#nickname(type='text')
+      .modal-footer
+        button.btn.info#nick-ok OK
+    #panel
+      #field
+      #lateral
+      .inline-inputs
+        input#textfield(type='text')
+        input.btn.info#ok(type='button', value='Send')
+    footer
+      address
+        strong Developed by Thiago Pontes
+        br
+        |thiagopnts@gmail.com

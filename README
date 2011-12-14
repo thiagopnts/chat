@@ -1,0 +1,4 @@
+Classical node.js chat example using socket.io
+
+node v0.4.8
+socket.io v0.8.7
