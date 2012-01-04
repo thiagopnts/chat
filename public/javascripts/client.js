@@ -1,6 +1,5 @@
 
 $(function() {
-//  $(".modal").unbind('click');
   $(document).ready(function() {
     var nickname;
     $("#nick-modal").modal({backdrop: 'static', keyboard: false, show: true});
@@ -56,15 +55,21 @@ $(function() {
       $("#field").animate({scrollTop: 10000000}, 500);
     });
 
+    $("#signout").click(function() {
+        window.location.reload();
+    });
+
     $("#nick-ok").click(function() {
         nickname = $("#nickname").val();
-        if (nickname.toLowerCase() === 'thiago' || nickname.toLowerCase() === 'thiagopnts' || nickname.toLowerCase() === 'tita') 
-            nickname = 'otário';
         if (nickname.trim() === "") 
-            alert('Deixe de onda...');
+            alert('You need a nickname');
         else {
-            socket.emit('set nickname', nickname);
+            var h5 = document.createElement('h5');
+            h5.innerText = nickname;
+            h5.id = 'identifier';
+            $("#nickname-bar")[0].appendChild(h5);
             $("#nick-modal").modal().trigger('hide');
+            socket.emit('set nickname', nickname);
         }
     });
 
@@ -75,11 +80,9 @@ $(function() {
 
     socket.on('message', function(data) {
         var li = document.createElement('li');
-        li.innerHTML = "<p><strong>"+data.from+" diz:</strong><br/>"+data.msg+"</p>";
+        li.innerHTML = "<p><strong>"+data.from+" diz:</strong><br/>"+data.msg+"</p>"; //bad thing here, injection.
         $("#field")[0].appendChild(li);
         $("#field").animate({scrollTop: 10000000}, 500);
     });
-
-
   });
 });

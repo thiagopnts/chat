@@ -22,7 +22,6 @@ app.configure(function(){
   app.use(express.static(__dirname + '/public'));
 });
 
-io.set('log level',0);
 app.configure('production', function(){
   app.use(express.errorHandler()); 
 });
@@ -40,7 +39,6 @@ app.get('/', function(req, res){
     });
 });
 
-app.listen(666);
 
 var users = []
 
@@ -66,5 +64,8 @@ io.sockets.on('connection', function(socket) {
     });
 });
 
+
+//run the app with sudo, need permission to bind a lower port.
+app.listen(666);
 
 console.log("Express server listening on port %d", app.address().port);

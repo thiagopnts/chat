@@ -81,12 +81,43 @@ li {
     list-style: none;
 }
 
+#signout {
+    position: absolute;
+    left: 845px;
+    top: 115px;
+}
+
+h5 { 
+    position: relative;
+    color: #EEE;
+    left: 5px;
+    bottom: 10px;
+}
+
+#identifier {
+    position: relative;
+    bottom: 20px;
+    left: 15px;
+}
+
 #lateral, #field {
     position: absolute;
     background-color: rgba(0,0,0,0.3);
     border-radius: 5px;
     border: thin;
     overflow: auto;
+}
+
+#nickname-bar {
+    margin: 0 auto;
+    position: relative;
+    background: url(../images/pixelGen.png);
+    height: 50px;
+    width: 200px;
+    top: 150px;
+    box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.50);
+    border-radius: 5px;
+    right: 230px;
 }
 
 #lateral {

@@ -7,10 +7,10 @@ html(lang='pt-br')
     script(src='javascripts/jquery-1.6.2.js')
     script(src='bootstrap/js/bootstrap-modal.js')
     script(src='/socket.io/socket.io.js')
-    script(src='javascripts/all.js')
+    script(src='javascripts/client.js')
   body
     header
-      h1#logo Node.js Chat
+      h1#logo CHATíssimo
     .modal.hide.fade#nick-modal
       .modal-header
         h3 Choose a nickname
@@ -21,12 +21,16 @@ html(lang='pt-br')
             input#nickname(type='text')
       .modal-footer
         button.btn.info#nick-ok OK
+    input#signout.btn.info(type='button', value='Sign out')
     #panel
       #field
       #lateral
       .inline-inputs
         input#textfield(type='text')
         input.btn.info#ok(type='button', value='Send')
+    #nickname-bar
+      h5(style='color:#EEE') Logged as:
+
     footer
       address
         strong Developed by Thiago Pontes
