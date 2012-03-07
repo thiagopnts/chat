@@ -1,24 +1,10 @@
-
 Dependencies
 ------------
 [node 0.4.8]
 [socket.io v0.8.7]
 [express v2.3.9]
 
-About the project
+about the project
 -----------------
 
-The project was developed using JavaScript in the front-end
-and in the backend. The original idea was to implement a chat
-using node.js and socket.io(classical example) with a nice UI.
-I really think interessing the idea of real-time web apps, making
-a push with the information notifying all the connected clients
-when necessary, I have great interest in this evented I/O area,
-and in the way it can scale, using advanced computer network and
-operational system concepts. Was used a micro-framework too, called
-ExpressJS to handle the HTTP connections and the socket.io to
-broadcast the messages between the users.
-I developed this project to help me to learn and understand more
-about server-side javascript and front-end development, using HTML5,
-CSS3 and jQuery. It was really funny build a project in a couple hours,
-put it online and play with some friends.
+2 hours project, just for fun :)
